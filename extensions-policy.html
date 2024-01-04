@@ -8,22 +8,24 @@
       var respecConfig = {
         // Working Groups ids at https://respec.org/w3c/groups/
         group: "socialcg",
-        specStatus: "unofficial",
+        specStatus: "CG-DRAFT",
+        shortName: "activitystreams-extensions-policy",
         editors: [{
           name: "Evan Prodromou",
           url: "https://evanp.me/",
+          w3cid: 43626
         }],
         github: {
           branch: "main",
-          repoURL: "w3c/activitystreams",
+          repoURL: "swicg/extensions-policy",
         },
         // See https://respec.org/docs/#xref for usage.
-        xref: ["activitystreams-core", "activitystreams-vocabulary"],
+        xref: ["activitystreams-core", "activitystreams-vocabulary", "activitypub"],
       };
     </script>
+    <title>Process for Including Extensions in Activity Streams 2.0</title>
   </head>
   <body>
-    <h1 id="title">Process for Including Extensions in Activity Streams 2.0</h1>
     <section id='abstract'>
       <p>
         This document describes the process and criteria for approving extensions
@@ -31,10 +33,6 @@
       </p>
     </section>
     <section id='sotd'>
-      <p>
-        This is a draft Note for publication by the SocialCG. It is not a W3C
-        recommendation.
-      </p>
     </section>
     <section>
       <h2>Motivation</h2>
@@ -287,6 +285,7 @@
       </p>
     </section>
     <section id='changelog'>
+      <h2>Changelog</h2>
       <ul>
         <li>
           <strong>2023-09-29</strong>: Add review criteria.
