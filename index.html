@@ -174,17 +174,14 @@
           document.
       </p>
       <p>
-          This Report describes the criteria that the SocialCG will use to decide
-          whether the benefits of simplicity and clarity from including extension terms in the main context document outweigh the costs of doing so.
+          This Report describes the criteria that the SocialCG will use to decide whether the benefits of simplicity and clarity from adding extension terms to the main context document outweigh the costs of doing so. It is a refinement of the W3C's <a href="https://www.w3.org/2016/08/namespaces/">Adding to W3C RDF Namespaces</a> document to the specific needs of the SocialCG, Activity Streams 2.0, and ActivityPub.
       </p>
       <p>
-          Properly implemented, this process provides a way to make Activity Streams 2.0
-          a continuously evolving vocabulary, serving new needs for developers and
-          users, while maintaining the stability of the core terms.
+          Properly implemented, this process provides a way to make Activity Streams 2.0 a continuously evolving vocabulary, serving new needs for developers and users, while maintaining the stability of the core terms.
       </p>
     </section>
     <section>
-      <h2>Process</h2>
+      <h2>Adding terms</h2>
       <p>These are the steps to including an extension in
           the Activity Streams 2.0 context document.</p>
       <ol>
@@ -226,44 +223,57 @@
           will include the new terms.
         </li>
       </ol>
+      <section>
+        <h3>Criteria</h3>
+        <p>To be included in the Activity Streams 2.0, extensions SHOULD meet these requirements.</p>
+        <ul>
+            <li>
+                A unique namespace, distinct from the Activity Streams 2.0 namespace.
+            </li>
+            <li>
+                A JSON-LD context document at a permanent URL. Services like <a href="https://purl.archive.org/">https://purl.archive.org/</a> and <a href="https://w3id.org/">https://w3id.org/</a> can be used to provide permanent URLs.
+            </li>
+            <li>A document that describes the terms and usage of the extension.</li>
+            <li>
+                An intellectual property rights policy that is compatible with
+                inclusion in a W3C specification.
+            </li>
+            <li>
+                Demonstrated implementation by at least two (2) independent publishers.
+            </li>
+            <li>
+                Demonstrated implementation by at least two (2) independent consumers.
+            </li>
+        </ul>
+        <p>Extensions to be included MAY meet these criteria:</p>
+        <ul>
+          <li>
+            A security review, either by the submitter, members of the SocialCG, or by the <a href="https://www.w3.org/Security/wiki/IG/W3C_spec_review">SecurityIG</a>.
+          </li>
+          <li>
+            A privacy review, either by the submitter, members of the SocialCG, or others.
+          </li>
+          <li>
+            An accessibility (A11Y) review.
+          </li>
+          <li>
+            An internationalisation (I18N) review.
+          </li>
+        </ul>
+      </section>
     </section>
     <section>
-      <h2>Criteria</h2>
-      <p>To be included in the Activity Streams 2.0, extensions SHOULD meet these requirements.</p>
-      <ul>
-          <li>
-              A unique namespace, distinct from the Activity Streams 2.0 namespace.
-          </li>
-          <li>
-              A JSON-LD context document at a permanent URL. Services like <a href="https://purl.archive.org/">https://purl.archive.org/</a> and <a href="https://w3id.org/">https://w3id.org/</a> can be used to provide permanent URLs.
-          </li>
-          <li>A document that describes the terms and usage of the extension.</li>
-          <li>
-              An intellectual property rights policy that is compatible with
-              inclusion in a W3C specification.
-          </li>
-          <li>
-              Demonstrated implementation by at least two (2) independent publishers.
-          </li>
-          <li>
-              Demonstrated implementation by at least two (2) independent consumers.
-          </li>
-      </ul>
-      <p>Extensions to be included MAY meet these criteria:</p>
-      <ul>
-        <li>
-          A security review, either by the submitter, members of the SocialCG, or by the <a href="https://www.w3.org/Security/wiki/IG/W3C_spec_review">SecurityIG</a>.
-        </li>
-        <li>
-          A privacy review, either by the submitter, members of the SocialCG, or others.
-        </li>
-        <li>
-          An accessibility (A11Y) review.
-        </li>
-        <li>
-          An internationalisation (I18N) review.
-        </li>
-      </ul>
+      <h2>Modifying and removing terms</h2>
+      <p>
+        The W3C policy on namespaces has <a href="https://www.w3.org/2016/08/namespaces/#modification">specific requirements for modifying or removing terms</a> from a namespace document such as a JSON-LD context document. In short, terms defined in a Recommendation may not be modified or removed. This would include all published Activity Streams 2.0 and ActivityPub terms.
+      </p>
+      <p>
+        The SocialCG MAY remove or modify extension terms, recognizing that this will be disruptive to publishers and consumers who depend on the extension term being in the context document. The SocialCG SHOULD NOT remove extension terms without a strong justification. Serious security issues or legal issues, for example, may justify removal. Modifying or removing an extension term MUST be approved by a resolution of the SocialCG.
+      </p>
+      <p>
+        The SocialCG MAY mark terms as deprecated. Deprecated terms are still
+        part of the context document, but are documented as deprecated. Deprecating a term MUST be approved by a resolution of the SocialCG.
+      </p>
     </section>
     <section id='history'>
       <h2>Previous Work</h2>
@@ -286,6 +296,13 @@
     <section id='changelog'>
       <h2>Changelog</h2>
       <ul>
+        <li>
+          <strong>2024-04-05</strong>: Add section on modifying and removing terms. Correct typos. Link FEP process. Define SocialCG. Examples
+          of permanent URL services.
+        </li>
+        <li>
+          <strong>2024-01-05</strong>: Details on versioning process.
+        </li>
         <li>
           <strong>2023-09-29</strong>: Add review criteria.
         </li>
